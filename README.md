@@ -31,7 +31,7 @@
 
 [Windows安装Redis的流程 - 罗毅豪 - 博客园 (cnblogs.com)](https://www.cnblogs.com/luoyihao/p/16793388.html)
 
-https://yarnpkg.com/downloads/1.22.15/yarn-1.22.15.msi（yarn下载）
+（yarn下载）https://yarnpkg.com/downloads/1.22.15/yarn-1.22.15.msi   
 
 [Yarn 安装与使用详细介绍-CSDN博客](https://blog.csdn.net/csdn_yudong/article/details/82015885)
 
@@ -41,7 +41,7 @@ https://yarnpkg.com/downloads/1.22.15/yarn-1.22.15.msi（yarn下载）
 
 1. nodejs 要下载大于16.14，小于18的版本
 2. idea 要下载2020.1以上的版本，才能下载MyBatisX插件
-  推荐的可能不是最优的，大家可以根据自己的需求去百度查找相关教程
+    推荐的可能不是最优的，大家可以根据自己的需求去百度查找相关教程
 
 #### 前端启动方式
 
