@@ -35,7 +35,9 @@ import router from '@/router'
 import { useApp } from '@/pinia/modules/app'
 
 const service = axios.create({
-  baseURL: 'http://localhost:8501',    // 后端服务的ip地址和端口号
+  // 后端服务的ip地址和端口号
+  //  baseURL: 'http://localhost:8501',
+  baseURL: import.meta.env.VITE_API_BASE_URL || '/api',
   timeout: 10000,
   withCredentials: true,
 })
@@ -67,7 +69,7 @@ service.interceptors.response.use(
         router.push(`/login?redirect=${redirect}`)
         return Promise.reject(new Error(res.message || 'Error'))
     }
-    return res 
+    return res
   },
   // 响应失败进入第2个函数，该函数的参数是错误对象
   async error => {

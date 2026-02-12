@@ -33,7 +33,9 @@ export default env => {
   // console.log(111, env);
 
   return defineConfig({
-    // base: '/vue3-element-admin-site/',
+    // ✅ 必须配置！与 Nginx 的 location /web-b 一致
+    // ⚠️ 注意末尾的斜杠！
+    base: env.command === 'build' ? '/web-b/' : '/',
     plugins: [
       vue(),
       viteMockServe({
@@ -78,7 +80,9 @@ export default env => {
       open: true,
       proxy: {
         '/api': {
-          target: 'http://dev.api.xxx.com', // 后端接口的域名
+          // 后端接口的域名
+          // target: 'http://dev.api.xxx.com',
+          target: 'http://120.55.41.255:8080',
           changeOrigin: true,
           rewrite: path => path.replace(/^\/api/, ''),
         },
